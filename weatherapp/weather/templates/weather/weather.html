@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+</head>
+<style>
+body {
+  background-image: url('https://png.pngtree.com/thumb_back/fh260/back_pic/04/39/71/36584e58be12c25.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
+
+    <h1 style="background-color:hotpink;color:seagreen;text-align:center;font-size:60px">What's the WEATHER</h1>
+
+    <h2 style="color:red;font-size:40px">{{ city_name }}</h2>
+    <p style="font-size:30px">Description: {{ weather_description }}</p>
+    <p style="font-size:30px">Temperature: {{ temperature }}°C</p>
+    <p style="font-size:30px">Humidity: {{ humidity }}%</p>
+    <p style="font-size:30px">Pressure: {{ pressure }} hPa</p>
+
+    <form method="get">
+        <input type="text" name="city" placeholder="Enter city" value="{{ city_name }}">
+        <button style="font-size:30px;color:cornflowerblue" type="submit">Get Weather</button>
+    </form>
+</body>
+</html>
