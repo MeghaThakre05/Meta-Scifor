@@ -1,0 +1,17 @@
+<!-- employees/templates/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Office Management System</title>
+</head>
+<body style="background-image: url('https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTAyL3Jhd3BpeGVsX29mZmljZV8zNF9jbG9zZXVwX3Bob3RvX2JsYW5rX3Bvc3Rlcl9tb2NrdXB3aGl0ZV93YWxsY181ODljN2QxNi1kM2YwLTQyYTItOTQ4ZS1hYzc2M2UyMjNhNmRfMS5qcGc.jpg');background-repeat: no-repeat;background-size: cover">
+    <h1 style="font-size: 80px ; color:darkred; text-align: center" >Welcome to the Office Employee Management System</h1>
+    <br><br>
+    <nav>
+        <a href="{% url 'view_employees' %}" style="font-size: 50px">View Employees</a>
+        <br><br><br><br>
+        <a href="{% url 'add_employee' %}" style="font-size: 50px">Add Employee</a>
+    </nav>
+</body>
+</html>

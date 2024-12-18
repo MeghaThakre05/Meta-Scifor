@@ -1,0 +1,18 @@
+<!-- templates/employees/delete_employee.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Employee</title>
+</head>
+<body>
+    <h1>Are you sure you want to delete {{ employee.first_name }} {{ employee.last_name }}?</h1>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Yes, Delete</button>
+    </form>
+    <a href="{% url 'view_employees' %}">Cancel</a>
+</body>
+</html>
+

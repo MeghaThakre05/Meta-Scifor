@@ -1,0 +1,17 @@
+<!-- templates/employees/update_employee.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Employee</title>
+</head>
+<body style="background-image: url('https://t3.ftcdn.net/jpg/06/76/11/34/360_F_676113431_1rqsM7P24VBWGZiFVyLjJOxyQtCgEqKk.jpg');background-repeat: no-repeat;background-size: cover">
+    <h1>Update Employee</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>

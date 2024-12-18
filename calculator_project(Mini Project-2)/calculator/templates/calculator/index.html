@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background: antiquewhite;
+        }
+        input, select {
+            margin: 10px;
+            padding: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<h1 style="color: darkred">Calculator</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    <input type="text" name="num1" placeholder="Enter first number" required>
+    <input type="text" name="num2" placeholder="Enter second number">
+    <br>
+    <select name="operation">
+        <option value="add">Addition (+)</option>
+        <option value="subtract">Subtraction (-)</option>
+        <option value="multiply">Multiplication (*)</option>
+        <option value="divide">Division (/)</option>
+        <option value="sqrt">Square Root (√)</option>
+        <option value="power">Power (^)</option>
+    </select>
+    <br>
+    <button type="submit">Calculate</button>
+</form>
+
+{% if result %}
+    <div class="result">
+        <h3>Result: {{ result }}</h3>
+    </div>
+{% elif error_message %}
+    <div class="error">
+        <h3>{{ error_message }}</h3>
+    </div>
+{% endif %}
+
+</body>
+</html>
